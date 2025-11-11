@@ -3,7 +3,6 @@ import java.util.Date;
 
 public class Customer extends User {
     private String codeCustomer;
-    private int point;
 
     public Customer() {}
 
@@ -14,11 +13,9 @@ public class Customer extends User {
                     String address,
                     String gender,
                     String password,
-                    String codeCustomer,
-                    int point) {
+                    String codeCustomer) {
         super(name, email, userName, birthday, address, gender, password);
         this.codeCustomer = codeCustomer;
-        this.point = point;
     }
 
     public String getCodeCustomer() {
@@ -29,11 +26,4 @@ public class Customer extends User {
         this.codeCustomer = codeCustomer;
     }
 
-    public int getPoint() {
-        return point;
-    }
-
-    public void setPoint(int point) {
-        this.point = point;
-    }
 }

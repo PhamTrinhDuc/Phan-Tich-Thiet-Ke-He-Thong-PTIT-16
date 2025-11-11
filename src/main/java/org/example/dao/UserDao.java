@@ -23,7 +23,6 @@ public class UserDao extends Dao{
             stmt.setString(6, customer.getGender());
             stmt.setString(7, customer.getPassword());
             stmt.setString(8, customer.getCodeCustomer());
-            stmt.setInt(9, customer.getPoint());
 
             int rows = stmt.executeUpdate();
             System.out.println("Thêm khách hàng với rows: " + rows);

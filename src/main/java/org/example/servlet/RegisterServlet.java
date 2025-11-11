@@ -43,7 +43,7 @@ public class RegisterServlet extends HttpServlet {
         String codeCustomer = username + " " +  birthDay;
 
         Customer customer = new Customer(
-                name, username, email, birthDay, address, gender, password, codeCustomer, 0
+                name, username, email, birthDay, address, gender, password, codeCustomer
         );
 
         boolean is_sucess = userDao.addCustomer(customer);
