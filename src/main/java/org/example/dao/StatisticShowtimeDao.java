@@ -41,6 +41,7 @@ public class StatisticShowtimeDao extends  Dao{
                 double totalRevenues = rs.getDouble("total_revenues");
 
                 StatisticShowtime statisticShowtime = new StatisticShowtime();
+
                 statisticShowtime.setId(showtimeId);
                 statisticShowtime.setStartTime(Timestamp.valueOf(showtimStart));
                 statisticShowtime.setTotalTickets(totalTickets);

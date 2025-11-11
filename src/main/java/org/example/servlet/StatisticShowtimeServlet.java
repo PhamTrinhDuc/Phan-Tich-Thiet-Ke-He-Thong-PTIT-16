@@ -20,19 +20,19 @@ public class StatisticShowtimeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        System.out.println("Movie id: " + request.getParameter("movieId"));
-        System.out.println("Start time: " + request.getParameter("startDate"));
-        System.out.println("End time: " + request.getParameter("endDate"));
+//        System.out.println("Movie id: " + request.getParameter("movieId"));
+//        System.out.println("Start time: " + request.getParameter("startDate"));
+//        System.out.println("End time: " + request.getParameter("endDate"));
 
         Integer movieId = Integer.valueOf(request.getParameter("movieId"));
         String startTimeStr = request.getParameter("startDate");
         String endTimeStr = request.getParameter("endDate");
 
-        if (startTimeStr == null || endTimeStr == null || startTimeStr.isEmpty() || endTimeStr.isEmpty()) {
-            // Nếu không có tham số, chuyển hướng về trang
-            request.getRequestDispatcher("/WEB-INF/views/StatisticMovie.jsp").forward(request, response);
-            return;
-        }
+//        if (startTimeStr == null || endTimeStr == null || startTimeStr.isEmpty() || endTimeStr.isEmpty()) {
+//            // Nếu không có tham số, chuyển hướng về trang
+//            request.getRequestDispatcher("/WEB-INF/views/StatisticMovie.jsp").forward(request, response);
+//            return;
+//        }
 
         Date startDate = Date.valueOf(startTimeStr);
         Date endDate = Date.valueOf(endTimeStr);

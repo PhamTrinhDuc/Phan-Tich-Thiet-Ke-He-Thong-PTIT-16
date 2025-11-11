@@ -26,18 +26,18 @@ public class StatisticBillServlet extends HttpServlet {
         String startTimeStr = request.getParameter("startDate");
         String endTimeStr = request.getParameter("endDate");
 
-        if (startTimeStr == null || endTimeStr == null || startTimeStr.isEmpty() || endTimeStr.isEmpty()) {
-            // Nếu không có tham số, chuyển hướng về trang
-            request.getRequestDispatcher("/WEB-INF/views/StatisticBill.jsp").forward(request, response);
-            return;
-        }
+//        if (startTimeStr == null || endTimeStr == null || startTimeStr.isEmpty() || endTimeStr.isEmpty()) {
+//            // Nếu không có tham số, chuyển hướng về trang
+//            request.getRequestDispatcher("/WEB-INF/views/StatisticBill.jsp").forward(request, response);
+//            return;
+//        }
 
         Date startDate = Date.valueOf(startTimeStr);
         Date endDate = Date.valueOf(endTimeStr);
 
         List<Bill> billStats = billDao.getBillStatistic(showtimeId, startDate, endDate);
 
-        System.out.println("billStats: " +  billStats);
+//        System.out.println("billStats: " +  billStats);
 
         request.setAttribute("billStats", billStats);
         request.setAttribute("movieName", movieName);
